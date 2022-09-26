@@ -5,6 +5,9 @@ public class UserInterface {
     Scanner s = new Scanner(System.in);
     public void start() {
 
+        Adventure currentRoom = new Adventure();
+
+
         System.out.println("WELCOME TO THE ADVENTURE GAME");
         System.out.println("-----------------------------");
         System.out.println("Type 'go north' to go north");
@@ -32,7 +35,7 @@ public class UserInterface {
                     System.out.println("You've gone east");
                     break;
                 case "look around":
-                    System.out.println("Looking around");
+                    System.out.println("Looking around ");
                     break;
             }
         } while (true);
