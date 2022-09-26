@@ -3,7 +3,7 @@ public class Room {
     private String name;
     private String roomDescription;
 
-    public Room(String name,String roomDescription) {
+    public Room(String name, String roomDescription) {
         this.name = name;
         this.roomDescription = roomDescription;
     }
@@ -17,7 +17,7 @@ public class Room {
     }
 
     public String toString() {
-        return roomDescription;
+        return name + " " + roomDescription;
     }
 
 
