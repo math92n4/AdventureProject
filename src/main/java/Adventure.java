@@ -6,8 +6,6 @@ public class Adventure {
         return currentRoom;
     }
 
-
-
     public void createRooms() {
         Room room1 = new Room("Room 1", "its dark and lonely in here");
         Room room2 = new Room("Room 2", "its dark and lonely in here");

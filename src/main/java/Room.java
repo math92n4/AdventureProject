@@ -29,12 +29,12 @@ public class Room {
         this.north = north;
     }
 
-    public void setSouth(Room east) {
-        this.east = east;
+    public void setSouth(Room south) {
+        this.south = south;
     }
 
-    public void setEast(Room south) {
-        this.south = south;
+    public void setEast(Room east) {
+        this.east = east;
     }
 
     public void setWest(Room west) {

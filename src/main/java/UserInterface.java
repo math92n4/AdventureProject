@@ -18,8 +18,9 @@ public class UserInterface {
         /*("Night City", "Is like a toxic lover. A seductive and ruthless one at that, it's capable of" +
             "teasing you with the promises ");*/
 
-        do {
 
+
+        do {
             String walk = s.nextLine();
 
             switch (walk) {
