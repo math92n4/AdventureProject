@@ -6,7 +6,6 @@ public class UserInterface {
 
     public void start() {
 
-
         Adventure game = new Adventure();
         game.createRooms();
 
@@ -36,15 +35,19 @@ public class UserInterface {
                     game.goSouth();
                     if (game.getCurrentRoom() == null)
                         System.out.println("Do you really wanna jump out the window that bad...");
-                    System.out.println("You've gone south");
+                   else System.out.println("You've gone south");
                     break;
                 case "go west":
                     game.goWest();
-                    System.out.println("You've gone west");
+                    if (game.getCurrentRoom() == null)
+                        System.out.println("Do you really wanna jump out the window that bad...");
+                   else System.out.println("You've gone west");
                     break;
                 case "go east":
                     game.goEast();
-                    System.out.println("You've gone east");
+                    if (game.getCurrentRoom() == null)
+                        System.out.println("Do you really wanna jump out the window that bad...");
+                   else System.out.println("You've gone east");
                     break;
                 case "look around":
                     System.out.println("Looking around ");
