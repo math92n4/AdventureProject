@@ -7,7 +7,6 @@ public class UserInterface {
 
         Adventure game = new Adventure();
 
-
         System.out.println("WELCOME TO THE ADVENTURE GAME");
         System.out.println("-----------------------------");
         System.out.println("Type 'go north' to go north");
