@@ -15,6 +15,9 @@ public class UserInterface {
         System.out.println("Type 'go east' to go east");
         System.out.println("Type 'look around' to look around");
 
+        /*("Night City", "Is like a toxic lover. A seductive and ruthless one at that, it's capable of" +
+            "teasing you with the promises ");*/
+
         do {
 
             String walk = s.nextLine();
