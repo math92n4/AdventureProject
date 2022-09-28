@@ -6,6 +6,8 @@ public class Adventure {
         return currentRoom;
     }
 
+    /*("Night City", "Is like a toxic lover. A seductive and ruthless one at that, it's capable of" +
+         "teasing you with the promises ");*/
     public void createRooms() {
         Room room1 = new Room("Room 1", "its dark and lonely in here 1");
         Room room2 = new Room("Room 2", "its dark and lonely in here 2");

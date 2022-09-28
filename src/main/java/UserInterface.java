@@ -9,7 +9,12 @@ public class UserInterface {
         Adventure game = new Adventure();
         game.createRooms();
 
-        System.out.println("WELCOME TO THE ADVENTURE GAME");
+        System.out.println("Night City.\n" +
+                "A lot like a toxic lover. is seductive and ruthless, it's capable of\n" +
+                "teasing you with the countless promises and joys of life, but for the most part screws you up. The city has spiraled out of\n" +
+                "control ever since Chrome came to town... It's now a place of violence, greed and constant fight for power.\n" +
+                "You're surrounded by countless corporate buildings, and high sky scrapers with glass walls shinier than most could imagine...\n" +
+                "And if you've made it this far already, you're in for deep trouble. Welcome to Night City, the city of hope and despair\n");
         System.out.println("-----------------------------");
         System.out.println("Type 'go north' to go north");
         System.out.println("Type 'go south' to go south");
@@ -17,8 +22,6 @@ public class UserInterface {
         System.out.println("Type 'go east' to go east");
         System.out.println("Type 'look around' to look around");
 
-        /*("Night City", "Is like a toxic lover. A seductive and ruthless one at that, it's capable of" +
-            "teasing you with the promises ");*/
 
         do {
             String walk = s.nextLine();
