@@ -13,8 +13,8 @@ public class UserInterface {
                 "A lot like a toxic lover. is seductive and ruthless, it's capable of\n" +
                 "teasing you with the countless promises and joys of life, but for the most part screws you up. The city has spiraled out of\n" +
                 "control ever since Chrome came to town... It's now a place of violence, greed and constant fight for power.\n" +
-                "You're surrounded by countless corporate buildings, and high sky scrapers with glass walls shinier than most could imagine...\n" +
-                "And if you've made it this far already, you're in for a lot of trouble. Welcome to Night City, the city of hope and despair");
+                "You're surrounded by countless corporate buildings, high skyscrapers with glass walls shinier than most could imagine, junkies and Cyberpunks.\n" +
+                "And if you've made it this far already, you're in for a lot of trouble. Welcome to Night City, the place of your wildest desires.");
         System.out.println("-----------------------------");
         System.out.println("Type 'go north' to go north");
         System.out.println("Type 'go south' to go south");

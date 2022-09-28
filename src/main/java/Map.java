@@ -3,7 +3,8 @@ public class Map {
    private Room startRoom = null;
 
     public void createRooms() {
-        Room room1 = new Room("Room 1", "its dark and lonely in here ");
+        Room room1 = new Room("Room 1", "its dark and lonely in here. Something also seems off, let's keep our eyes open and be ready for whatever" +
+                " might happen...");
         Room room2 = new Room("Room 2", "its dark and lonely in here ");
         Room room3 = new Room("Room 3", "its dark and lonely in here ");
         Room room4 = new Room("Room 4", "its dark and lonely in here ");
