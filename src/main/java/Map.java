@@ -3,15 +3,15 @@ public class Map {
    private Room startRoom = null;
 
     public void createRooms() {
-        Room room1 = new Room("Room 1", "its dark and lonely in here 1");
-        Room room2 = new Room("Room 2", "its dark and lonely in here 2");
-        Room room3 = new Room("Room 3", "its dark and lonely in here 3");
-        Room room4 = new Room("Room 4", "its dark and lonely in here 4");
-        Room room5 = new Room("Room 5", "its dark and lonely in here 5");
-        Room room6 = new Room("Room 6", "its dark and lonely in here 6");
-        Room room7 = new Room("Room 7", "its dark and lonely in here 7");
-        Room room8 = new Room("Room 8", "its dark and lonely in here 8");
-        Room room9 = new Room("Room 9", "its dark and lonely in here 9");
+        Room room1 = new Room("Room 1", "its dark and lonely in here ");
+        Room room2 = new Room("Room 2", "its dark and lonely in here ");
+        Room room3 = new Room("Room 3", "its dark and lonely in here ");
+        Room room4 = new Room("Room 4", "its dark and lonely in here ");
+        Room room5 = new Room("Room 5", "its dark and lonely in here ");
+        Room room6 = new Room("Room 6", "its dark and lonely in here ");
+        Room room7 = new Room("Room 7", "its dark and lonely in here ");
+        Room room8 = new Room("Room 8", "its dark and lonely in here ");
+        Room room9 = new Room("Room 9", "its dark and lonely in here ");
 
         // movement for room 1
         room1.setEast(room2);
