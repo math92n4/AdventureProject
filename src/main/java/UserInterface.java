@@ -7,7 +7,7 @@ public class UserInterface {
     public void start() {
 
         Adventure game = new Adventure();
-        game.createRooms();
+
 
         System.out.println("Night City.\n" +
                 "A lot like a toxic lover. is seductive and ruthless, it's capable of\n" +
@@ -23,34 +23,34 @@ public class UserInterface {
         System.out.println("Type 'look around' to look around");
 
 
+        boolean error = false;
+
         do {
+            error = false;
             String walk = s.nextLine();
-
-
-           switch (walk) {
+            switch (walk) {
                 case "go north":
-                    game.goNorth();
-                    if (game.getCurrentRoom() == null)
-                        System.out.println("Do you really wanna jump out the window that bad...");
-                    else System.out.println("You've gone north");
+                    if (game.goNorth() == true)
+                        System.out.println("You've gone north");
+                    else System.out.println("Do you really wanna jump out the window that bad...");
                     break;
                 case "go south":
                     game.goSouth();
                     if (game.getCurrentRoom() == null)
                         System.out.println("Do you really wanna jump out the window that bad...");
-                   else System.out.println("You've gone south");
+                    else System.out.println("You've gone south");
                     break;
                 case "go west":
                     game.goWest();
                     if (game.getCurrentRoom() == null)
                         System.out.println("Do you really wanna jump out the window that bad...");
-                   else System.out.println("You've gone west");
+                    else System.out.println("You've gone west");
                     break;
                 case "go east":
                     game.goEast();
                     if (game.getCurrentRoom() == null)
                         System.out.println("Do you really wanna jump out the window that bad...");
-                   else System.out.println("You've gone east");
+                    else System.out.println("You've gone east");
                     break;
                 case "look around":
                     System.out.println("Looking around ");
