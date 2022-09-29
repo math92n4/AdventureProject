@@ -2,7 +2,7 @@ public class Map {
 
    private Room startRoom = null;
 
-    public void createRooms() {
+    public void mapBuild() {
         Room room1 = new Room("Room 1", "its dark and lonely in here. Something also seems off, let's keep our eyes open and be ready for whatever" +
                 " might happen...");
         Room room2 = new Room("Room 2", "its dark and lonely in here ");

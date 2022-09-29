@@ -45,7 +45,7 @@ public class Adventure {
     }
 
     public Adventure() {
-        rooms.createRooms();
+        rooms.mapBuild();
         currentRoom = rooms.getStartRoom();
     }
 }

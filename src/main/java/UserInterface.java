@@ -3,11 +3,9 @@ import java.util.Scanner;
 public class UserInterface {
 
     Scanner s = new Scanner(System.in);
+    Adventure game = new Adventure();
 
     public void start() {
-
-        Adventure game = new Adventure();
-
 
         System.out.println("Night City.\n" +
                 "A lot like a toxic lover. is seductive and ruthless, it's capable of\n" +
@@ -15,6 +13,9 @@ public class UserInterface {
                 "control ever since Chrome came to town... It's now a place of violence, greed and constant fight for power.\n" +
                 "You're surrounded by countless corporate buildings, high skyscrapers with glass walls shinier than most could imagine, junkies and Cyberpunks.\n" +
                 "And if you've made it this far already, you're in for a lot of trouble. Welcome to Night City, the place of your wildest desires.");
+    }
+
+    public void movement() {
         System.out.println("-----------------------------");
         System.out.println("Type 'go north' to go north");
         System.out.println("Type 'go south' to go south");
@@ -22,8 +23,8 @@ public class UserInterface {
         System.out.println("Type 'go east' to go east");
         System.out.println("Type 'look around' to look around");
 
-
         boolean error = false;
+
 
         do {
             error = false;
@@ -40,7 +41,7 @@ public class UserInterface {
                     if (game.goSouth() == true)
                         System.out.println("You've gone south to " + game.getCurrentRoom().getName()
                                 + " " + game.getCurrentRoom().getRoomDescription());
-                    else System.out.println("We're pretty high up in the sky, i'm not so sure about that...");
+                    else System.out.println("We're pretty high up in the sky, I'm not so sure about that...");
                     break;
                 case "go west":
                     game.goWest();
