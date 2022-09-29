@@ -1,51 +1,27 @@
 public class Adventure {
 
     Map rooms = new Map();
-
-    private Room currentRoom = null;
-
-    public Room getCurrentRoom() {
-        return currentRoom;
-    }
+    Player player = new Player();
 
     public boolean goNorth() {
-        Room requestedRoom = null;
-        requestedRoom = currentRoom.getNorth();
-       if (requestedRoom != null) {
-           currentRoom = requestedRoom;
-           return true;
-       } return false;
+        return player.goNorth();
     }
 
     public boolean goSouth() {
-        Room requestedRoom = null;
-        requestedRoom = currentRoom.getSouth();
-        if (requestedRoom != null) {
-            currentRoom = requestedRoom;
-            return true;
-        } return false;
+        return player.goSouth();
     }
 
     public boolean goWest() {
-        Room requestedRoom = null;
-        requestedRoom = currentRoom.getWest();
-        if (requestedRoom != null) {
-            currentRoom = requestedRoom;
-            return true;
-        } return false;
+        return player.goWest();
     }
 
     public boolean goEast() {
-        Room requestedRoom = null;
-        requestedRoom = currentRoom.getEast();
-        if (requestedRoom != null) {
-            currentRoom = requestedRoom;
-            return true;
-        } return false;
+        return player.goEast();
     }
 
-    public Adventure() {
-        rooms.mapBuild();
-        currentRoom = rooms.getStartRoom();
+    public Room getCurrentRoom() {
+        return player.getCurrentRoom();
     }
+
+
 }

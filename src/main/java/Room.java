@@ -56,8 +56,4 @@ public class Room {
     public Room getWest() {
         return west;
     }
-
-    public String toString() {
-        return name + " " + roomDescription;
-    }
 }

@@ -2,8 +2,12 @@ import java.util.Scanner;
 
 public class UserInterface {
 
+    Adventure game;
+
     Scanner s = new Scanner(System.in);
-    Adventure game = new Adventure();
+    public UserInterface(Adventure controller) {
+        this.game = controller;
+    }
 
     public void start() {
 
@@ -24,7 +28,6 @@ public class UserInterface {
         System.out.println("Type 'look around' to look around");
 
         boolean error = false;
-
 
         do {
             error = false;
