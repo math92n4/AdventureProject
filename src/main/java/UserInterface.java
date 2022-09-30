@@ -40,21 +40,18 @@ public class UserInterface {
                     else System.out.println("You really wanna jump out the window that bad huh...");
                     break;
                 case "go south":
-                    game.goSouth();
                     if (game.goSouth() == true)
                         System.out.println("You've gone south to " + game.getCurrentRoom().getName()
                                 + " " + game.getCurrentRoom().getRoomDescription());
                     else System.out.println("We're pretty high up in the sky, I'm not so sure about that...");
                     break;
                 case "go west":
-                    game.goWest();
                     if (game.goWest() == true)
                         System.out.println("You've gone west to " + game.getCurrentRoom().getName()
                                 + " " + game.getCurrentRoom().getRoomDescription());
                     else System.out.println("Uhmm not gonna happen, nope...");
                     break;
                 case "go east":
-                    game.goEast();
                     if (game.goEast() == true)
                         System.out.println("You've gone east to " + game.getCurrentRoom().getName()
                                 + " " + game.getCurrentRoom().getRoomDescription());

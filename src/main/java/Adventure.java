@@ -1,7 +1,12 @@
 public class Adventure {
-
-    Map rooms = new Map();
+    
     Player player = new Player();
+
+    public Adventure() {
+        Map map = new Map();
+        map.mapBuild();
+        player.setCurrentRoom(map.getStartRoom());
+    }
 
     public boolean goNorth() {
         return player.goNorth();
