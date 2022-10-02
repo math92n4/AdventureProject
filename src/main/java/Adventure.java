@@ -1,6 +1,7 @@
 public class Adventure {
-    
+
     Player player = new Player();
+    Item items = new Item();
 
     public Adventure() {
         Map map = new Map();
@@ -28,5 +29,16 @@ public class Adventure {
         return player.getCurrentRoom();
     }
 
+    public String getItemName() {
+        return items.getItemName();
+    }
+
+    public String getItemAbility() {
+        return items.getAbility();
+    }
+
+    public double getItemPowerLevel() {
+        return items.getPowerLevel();
+    }
 
 }

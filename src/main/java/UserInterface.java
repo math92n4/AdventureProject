@@ -5,6 +5,7 @@ public class UserInterface {
     Adventure game;
 
     Scanner s = new Scanner(System.in);
+
     public UserInterface(Adventure controller) {
         this.game = controller;
     }
@@ -19,13 +20,19 @@ public class UserInterface {
                 "And if you've made it this far already, you're in for a lot of trouble. Welcome to Night City, the place of your wildest desires.");
     }
 
-    public void movement() {
+    public void actions() {
         System.out.println("-----------------------------");
         System.out.println("Type 'north' to go north");
         System.out.println("Type 'south' to go south");
         System.out.println("Type 'west' to go west");
         System.out.println("Type 'east' to go east");
         System.out.println("Type 'look' to look around");
+        System.out.println("-----------------------------");
+
+        System.out.println("Type 'inventory' to see what is in your inventory");
+        System.out.println("Type 'take' to pick up things from a room");
+        System.out.println("Type 'drop' to throw away something from your inventory");
+        System.out.println("-----------------------------");
 
         boolean error = false;
 
@@ -33,25 +40,25 @@ public class UserInterface {
             error = false;
             String walk = s.nextLine();
             switch (walk) {
-                case "north":
+                case "north", "n":
                     if (game.goNorth() == true)
                         System.out.println("You've gone north to " + game.getCurrentRoom().getName()
-                                + " " + game.getCurrentRoom().getRoomDescription());
+                                + " " + game.getCurrentRoom().getRoomDescription() + game.getItemName());
                     else System.out.println("You really wanna jump out the window that bad huh...");
                     break;
-                case "south":
+                case "south", "s":
                     if (game.goSouth() == true)
                         System.out.println("You've gone south to " + game.getCurrentRoom().getName()
                                 + " " + game.getCurrentRoom().getRoomDescription());
                     else System.out.println("We're pretty high up in the sky, I'm not so sure about that...");
                     break;
-                case "west":
+                case "west", "w":
                     if (game.goWest() == true)
                         System.out.println("You've gone west to " + game.getCurrentRoom().getName()
                                 + " " + game.getCurrentRoom().getRoomDescription());
                     else System.out.println("Uhmm not gonna happen, nope...");
                     break;
-                case "east":
+                case "east", "e":
                     if (game.goEast() == true)
                         System.out.println("You've gone east to " + game.getCurrentRoom().getName()
                                 + " " + game.getCurrentRoom().getRoomDescription());
@@ -63,6 +70,17 @@ public class UserInterface {
                     System.out.println("--------------");
                     System.out.println(game.getCurrentRoom().getRoomDescription());
                     break;
+
+                case "inventory", "inven", "inv":
+                    System.out.println("Your inventory contains: x");
+                    break;
+                case "take":
+                    System.out.println("You've picked up x");
+                    break;
+                case "drop":
+                    System.out.println("You've dropped: x");
+                    break;
+
             }
         } while (true);
     }

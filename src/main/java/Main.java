@@ -4,7 +4,7 @@ public class Main {
         Adventure controller = new Adventure();
         UserInterface ui = new UserInterface(controller);
         ui.start();
-        ui.movement();
+        ui.actions();
 
     }
 }
