@@ -21,11 +21,11 @@ public class UserInterface {
 
     public void movement() {
         System.out.println("-----------------------------");
-        System.out.println("Type 'go north' to go north");
-        System.out.println("Type 'go south' to go south");
-        System.out.println("Type 'go west' to go west");
-        System.out.println("Type 'go east' to go east");
-        System.out.println("Type 'look around' to look around");
+        System.out.println("Type 'north' to go north");
+        System.out.println("Type 'south' to go south");
+        System.out.println("Type 'west' to go west");
+        System.out.println("Type 'east' to go east");
+        System.out.println("Type 'look' to look around");
 
         boolean error = false;
 
@@ -33,31 +33,31 @@ public class UserInterface {
             error = false;
             String walk = s.nextLine();
             switch (walk) {
-                case "go north":
+                case "north":
                     if (game.goNorth() == true)
                         System.out.println("You've gone north to " + game.getCurrentRoom().getName()
                                 + " " + game.getCurrentRoom().getRoomDescription());
                     else System.out.println("You really wanna jump out the window that bad huh...");
                     break;
-                case "go south":
+                case "south":
                     if (game.goSouth() == true)
                         System.out.println("You've gone south to " + game.getCurrentRoom().getName()
                                 + " " + game.getCurrentRoom().getRoomDescription());
                     else System.out.println("We're pretty high up in the sky, I'm not so sure about that...");
                     break;
-                case "go west":
+                case "west":
                     if (game.goWest() == true)
                         System.out.println("You've gone west to " + game.getCurrentRoom().getName()
                                 + " " + game.getCurrentRoom().getRoomDescription());
                     else System.out.println("Uhmm not gonna happen, nope...");
                     break;
-                case "go east":
+                case "east":
                     if (game.goEast() == true)
                         System.out.println("You've gone east to " + game.getCurrentRoom().getName()
                                 + " " + game.getCurrentRoom().getRoomDescription());
                     else System.out.println("Can we not have suicidal thoughts just for once?...");
                     break;
-                case "look around":
+                case "look":
                     System.out.println("Looking around ");
                     System.out.println("You are in: " + game.getCurrentRoom().getName());
                     System.out.println("--------------");
