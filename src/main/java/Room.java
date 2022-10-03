@@ -10,9 +10,10 @@ public class Room {
     private Room west;
     private ArrayList<Item> items = new ArrayList<>();
 
-    public void addItems(Item item) {
+    public void addItem(Item item) {
         items.add(item);
     }
+
 
     public Room(String name, String roomDescription) {
         this.name = name;
@@ -29,6 +30,10 @@ public class Room {
 
     public String getRoomDescription() {
         return roomDescription;
+    }
+
+    public ArrayList<Item> getItems() {
+        return items;
     }
 
     public void setNorth(Room north) {

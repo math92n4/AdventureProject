@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Map {
 
    private Room startRoom = null;
@@ -16,26 +14,23 @@ public class Map {
         Room room8 = new Room("Room 8", "its dark and lonely in here ");
         Room room9 = new Room("Room 9", "its dark and lonely in here ");
 
-
-        Item item1 = new Item("Boom Blaster", "Some sort of gun", 250);
-        Item item2 = new Item("Thunder Strike", "A sword? A lightsaber?", 500);
-        Item item3 = new Item("Night goggles", "Night vision", 300);
-        Item item4 = new Item("Cybermunch", "Restores hp", 150);
-        Item item5 = new Item("adrenaline", "Temporary damage boost", 500);
-        Item item6 = new Item("Super boots", "Makes you move faster", 200);
-        Item item7 = new Item("Key", "For a door?", 0);
-        Item item8 = new Item("Sandevistian", "Makes you move 10x faster in battle for a few seconds", 1000);
+        Item item1 = new Item("Boom Blaster", "Some sort of gun");
+        Item item2 = new Item("Thunder Strike", "A sword? A lightsaber?");
+        Item item3 = new Item("Night goggles", "Night vision");
+        Item item5 = new Item("adrenaline", "Temporary damage boost");
+        Item item6 = new Item("Super boots", "Fresh sneaks, makes you move faster");
+        Item item7 = new Item("Sandevistian", "Armor, makes you move 10x faster in battle for a few seconds");
+        Item item8 = new Item("Key", "For a door?");
 
 
         // item placement for room1
-        room1.addItems(item1);
-        room2.addItems(item2);
-        room3.addItems(item3);
-        room4.addItems(item4);
-        room5.addItems(item5);
-        room6.addItems(item6);
-        room7.addItems(item7);
-        room8.addItems(item8);
+        room1.addItem(item1);
+        room2.addItem(item2);
+        room3.addItem(item3);
+        room5.addItem(item5);
+        room6.addItem(item6);
+        room7.addItem(item7);
+        room9.addItem(item8);
 
 
         // movement for room 1

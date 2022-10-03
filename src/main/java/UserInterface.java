@@ -41,28 +41,49 @@ public class UserInterface {
             String walk = s.nextLine();
             switch (walk) {
                 case "north", "n":
-                    if (game.goNorth() == true)
-                        System.out.println("You've gone north to " + game.getCurrentRoom().getName()
-                                + " " + game.getCurrentRoom().getRoomDescription() + game.getItemName());
+                    if (game.goNorth() == true) {
+                        Room currentRoom = game.getCurrentRoom();
+                        System.out.println("You've gone north to " + currentRoom.getName()
+                                + " " + currentRoom.getRoomDescription());
+                        System.out.println("These are the items in this room: ");
+                        for( Item item : currentRoom.getItems() ) {
+                            System.out.println(item.getItemName() + item.getItemDescription());
+                        }
+                    }
                     else System.out.println("You really wanna jump out the window that bad huh...");
                     break;
                 case "south", "s":
-                    if (game.goSouth() == true)
-                        System.out.println("You've gone south to " + game.getCurrentRoom().getName()
-                                + " " + game.getCurrentRoom().getRoomDescription());
-                    else System.out.println("We're pretty high up in the sky, I'm not so sure about that...");
+                    if (game.goSouth() == true){
+                        Room currentRoom = game.getCurrentRoom();
+                        System.out.println("You've gone south to " + currentRoom.getName()
+                                + " " + currentRoom.getRoomDescription());
+                        System.out.println("These are the items in this room: ");
+                        for( Item item : currentRoom.getItems() ) {
+                            System.out.println(item.getItemName() + item.getItemDescription());
+                        }
+                    } else System.out.println("We're pretty high up in the sky, I'm not so sure about that...");
                     break;
                 case "west", "w":
-                    if (game.goWest() == true)
-                        System.out.println("You've gone west to " + game.getCurrentRoom().getName()
-                                + " " + game.getCurrentRoom().getRoomDescription());
-                    else System.out.println("Uhmm not gonna happen, nope...");
+                    if (game.goWest() == true) {
+                        Room currentRoom = game.getCurrentRoom();
+                        System.out.println("You've gone west to " + currentRoom.getName()
+                                + " " + currentRoom.getRoomDescription());
+                        System.out.println("These are the items in this room: ");
+                        for( Item item : currentRoom.getItems() ) {
+                            System.out.println(item.getItemName() + item.getItemDescription());
+                        }
+                    } else System.out.println("Uhmm not gonna happen, nope...");
                     break;
                 case "east", "e":
-                    if (game.goEast() == true)
-                        System.out.println("You've gone east to " + game.getCurrentRoom().getName()
-                                + " " + game.getCurrentRoom().getRoomDescription());
-                    else System.out.println("Can we not have suicidal thoughts just for once?...");
+                    if (game.goEast() == true) {
+                        Room currentRoom = game.getCurrentRoom();
+                        System.out.println("You've gone east to " + currentRoom.getName()
+                                + " " + currentRoom.getRoomDescription());
+                        System.out.println("These are the items in this room: ");
+                        for( Item item : currentRoom.getItems() ) {
+                            System.out.println(item.getItemName() + item.getItemDescription());
+                        }
+                    } else System.out.println("Can we not have suicidal thoughts just for once?...");
                     break;
                 case "look":
                     System.out.println("Looking around ");
