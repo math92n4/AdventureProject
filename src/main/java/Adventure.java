@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Adventure {
 
     Player player = new Player();
@@ -8,25 +11,25 @@ public class Adventure {
         player.setCurrentRoom(map.getStartRoom());
     }
 
-    public boolean goNorth() {
-        return player.goNorth();
-    }
+    public boolean go(String direction) {
+        return player.move(direction.charAt(0));
 
-    public boolean goSouth() {
-        return player.goSouth();
-    }
-
-    public boolean goWest() {
-        return player.goWest();
-    }
-
-    public boolean goEast() {
-        return player.goEast();
     }
 
     public Room getCurrentRoom() {
         return player.getCurrentRoom();
     }
 
+    public ArrayList<Item> getInventory() {
+        return player.getInventory();
+    }
+
+    public boolean takeItem(String itemName) {
+        return player.takeItem(itemName);
+    }
+
+    public boolean dropItem(String itemName) {
+        return player.dropItem(itemName);
+    }
 
 }

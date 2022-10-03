@@ -14,13 +14,13 @@ public class Map {
         Room room8 = new Room("Room 8", "its dark and lonely in here ");
         Room room9 = new Room("Room 9", "its dark and lonely in here ");
 
-        Item item2 = new Item("Thunder sword", " +attack");
-        Item item3 = new Item("Night goggles", " +utility");
-        Item item4 = new Item("Boom shotgun", " +attack");
-        Item item5 = new Item("adrenaline shot,", " +dmg boost");
-        Item item6 = new Item("Super boots", " +movement");
-        Item item7 = new Item("Armor", " +toughness");
-        Item item8 = new Item("Key", " for a door?");
+        Item item2 = new Item("sword", " +attack");
+        Item item3 = new Item("goggles", " +utility");
+        Item item4 = new Item("shotgun", " +attack");
+        Item item5 = new Item("adrenaline,", " +dmg boost");
+        Item item6 = new Item("boots", " +movement");
+        Item item7 = new Item("armor", " +toughness");
+        Item item8 = new Item("key", " for a door?");
 
 
         // item placement for room1

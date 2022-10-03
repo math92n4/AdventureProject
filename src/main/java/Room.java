@@ -14,6 +14,10 @@ public class Room {
         items.add(item);
     }
 
+    public void removeItem(Item item) {
+        items.remove(item);
+    }
+
     public Room(String name, String roomDescription) {
         this.name = name;
         this.roomDescription = roomDescription;

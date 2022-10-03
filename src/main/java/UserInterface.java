@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-    Adventure game;
+    private Adventure game;
 
-    Scanner s = new Scanner(System.in);
+    private Scanner s = new Scanner(System.in);
 
     public UserInterface(Adventure controller) {
         this.game = controller;
@@ -19,6 +19,7 @@ public class UserInterface {
                 "You're surrounded by countless corporate buildings, high skyscrapers with glass walls shinier than most could imagine, junkies and Cyberpunks.\n" +
                 "And if you've made it this far already, you're in for a lot of trouble. Welcome to Night City, the place of your wildest desires.");
     }
+
     public void actions() {
         System.out.println("\nCONTROLS: ");
         System.out.println("-----------------------------");
@@ -39,9 +40,32 @@ public class UserInterface {
         do {
             error = false;
             String walk = s.nextLine();
-            switch (walk) {
-                case "north", "n":
-                    if (game.goNorth() == true) {
+            String[] userInputs = walk.split(" "); // array af strings // deler stringen op og splitter på mellemrum
+            String command = userInputs[0];
+            String userChoice = "";
+            if (userInputs.length > 1) {
+                userChoice = userInputs[1];
+            }
+
+
+            switch (command) {
+                case "go":
+
+                    boolean succes = game.go(userChoice);
+                    if (succes) {
+                        System.out.println("You've gone " + userChoice);
+                        Room currentRoom = game.getCurrentRoom();
+                        System.out.println(currentRoom.getName() + " " + currentRoom.getRoomDescription());
+                        System.out.println("These are the items in the room: ");
+                        System.out.println(" ");
+                        for (Item item : currentRoom.getItems()) {
+                            System.out.println(item.getItemName() + item.getItemDescription());
+                        }
+
+                    } else {
+                        System.out.println("Do you really want jump out the window that bad huh?...");
+                    }
+                   /* if (game.goNorth() == true) {
                         Room currentRoom = game.getCurrentRoom();
                         System.out.println("You've gone north to " + currentRoom.getName()
                                 + " " + currentRoom.getRoomDescription());
@@ -51,9 +75,9 @@ public class UserInterface {
                             System.out.println(item.getItemName() + item.getItemDescription());
                         }
                     }
-                    else System.out.println("You really wanna jump out the window that bad huh...");
+                    else System.out.println("You really wanna jump out the window that bad huh..."); */
                     break;
-                case "south", "s":
+              /*  case "south", "s":
                     if (game.goSouth() == true){
                         Room currentRoom = game.getCurrentRoom();
                         System.out.println("You've gone south to " + currentRoom.getName()
@@ -88,7 +112,7 @@ public class UserInterface {
                         }
                     }
                     else System.out.println("Can we not have suicidal thoughts just for once?...");
-                    break;
+                    break; */
                 case "look":
                     System.out.println("Looking around ");
                     System.out.println("You are in: " + game.getCurrentRoom().getName());
@@ -97,14 +121,14 @@ public class UserInterface {
                     break;
 
                 case "inventory", "inven", "inv":
-                    System.out.println("Your inventory contains: ");
+                    System.out.println("Your inventory contains: " + game.getInventory());
 
                     break;
                 case "take":
-                    System.out.println("You've picked up x");
+                    System.out.println("You've picked up x" + game.takeItem(userChoice));
                     break;
                 case "drop":
-                    System.out.println("You've dropped: x");
+                    System.out.println("You've dropped: " + game.dropItem(userChoice));
                     break;
             }
         } while (true);
