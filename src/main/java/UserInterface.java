@@ -56,11 +56,6 @@ public class UserInterface {
                         System.out.println("You've gone " + userChoice);
                         Room currentRoom = game.getCurrentRoom();
                         System.out.println(currentRoom.getName() + " " + currentRoom.getRoomDescription());
-                        System.out.println("These are the items in the room: ");
-                        System.out.println(" ");
-                        for (Item item : currentRoom.getItems()) {
-                            System.out.println(item.getItemName() + item.getItemDescription());
-                        }
 
                     } else {
                         System.out.println("Do you really want jump out the window that bad huh?...");
@@ -118,6 +113,11 @@ public class UserInterface {
                     System.out.println("You are in: " + game.getCurrentRoom().getName());
                     System.out.println("--------------");
                     System.out.println(game.getCurrentRoom().getRoomDescription());
+                    Room currentRoom = game.getCurrentRoom();
+                    System.out.println("\nThese are the items in the room: ");
+                    for (Item item : currentRoom.getItems()) {
+                        System.out.println(item.getItemName() + item.getItemDescription());
+                    }
                     break;
 
                 case "inventory", "inven", "inv":
