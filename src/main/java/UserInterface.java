@@ -19,8 +19,8 @@ public class UserInterface {
                 "You're surrounded by countless corporate buildings, high skyscrapers with glass walls shinier than most could imagine, junkies and Cyberpunks.\n" +
                 "And if you've made it this far already, you're in for a lot of trouble. Welcome to Night City, the place of your wildest desires.");
     }
-
     public void actions() {
+        System.out.println("\nCONTROLS: ");
         System.out.println("-----------------------------");
         System.out.println("Type 'north' to go north");
         System.out.println("Type 'south' to go south");
@@ -46,6 +46,7 @@ public class UserInterface {
                         System.out.println("You've gone north to " + currentRoom.getName()
                                 + " " + currentRoom.getRoomDescription());
                         System.out.println("These are the items in this room: ");
+                        System.out.println(" ");
                         for( Item item : currentRoom.getItems() ) {
                             System.out.println(item.getItemName() + item.getItemDescription());
                         }
@@ -101,7 +102,6 @@ public class UserInterface {
                 case "drop":
                     System.out.println("You've dropped: x");
                     break;
-
             }
         } while (true);
     }
