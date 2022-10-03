@@ -14,7 +14,6 @@ public class Room {
         items.add(item);
     }
 
-
     public Room(String name, String roomDescription) {
         this.name = name;
         this.roomDescription = roomDescription;

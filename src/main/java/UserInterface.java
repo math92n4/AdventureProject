@@ -62,7 +62,8 @@ public class UserInterface {
                         for( Item item : currentRoom.getItems() ) {
                             System.out.println(item.getItemName() + item.getItemDescription());
                         }
-                    } else System.out.println("We're pretty high up in the sky, I'm not so sure about that...");
+                    }
+                    else System.out.println("We're pretty high up in the sky, I'm not so sure about that...");
                     break;
                 case "west", "w":
                     if (game.goWest() == true) {
@@ -73,7 +74,8 @@ public class UserInterface {
                         for( Item item : currentRoom.getItems() ) {
                             System.out.println(item.getItemName() + item.getItemDescription());
                         }
-                    } else System.out.println("Uhmm not gonna happen, nope...");
+                    }
+                    else System.out.println("Uhmm not gonna happen, nope...");
                     break;
                 case "east", "e":
                     if (game.goEast() == true) {
@@ -84,7 +86,8 @@ public class UserInterface {
                         for( Item item : currentRoom.getItems() ) {
                             System.out.println(item.getItemName() + item.getItemDescription());
                         }
-                    } else System.out.println("Can we not have suicidal thoughts just for once?...");
+                    }
+                    else System.out.println("Can we not have suicidal thoughts just for once?...");
                     break;
                 case "look":
                     System.out.println("Looking around ");
@@ -94,7 +97,8 @@ public class UserInterface {
                     break;
 
                 case "inventory", "inven", "inv":
-                    System.out.println("Your inventory contains: x");
+                    System.out.println("Your inventory contains: ");
+
                     break;
                 case "take":
                     System.out.println("You've picked up x");
