@@ -22,8 +22,23 @@ public class Map {
         Item item7 = new Item("armor", " +toughness");
         Item item8 = new Item("key", " for a door?");
 
+        Food food1 = new Food("apple", " +15 hp");
+        Food food2 = new Food("proteinbar", " +20 hp");
+        Food food3 = new Food("rotten meat", " -25 hp");
+        Food food4 = new Food("tequila", " -35 hp");
+        Food food5 = new Food("mountain dew", " +15 hp");
+        Food food6 = new Food("sushi", " +50 hp");
 
-        // item placement for room1
+        // food placement
+        room1.addItem(food1);
+        room2.addItem(food2);
+        room3.addItem(food3);
+        room4.addItem(food4);
+        room9.addItem(food5);
+        room7.addItem(food6);
+
+
+        // item placement
         room2.addItem(item2);
         room3.addItem(item3);
         room4.addItem(item4);
@@ -31,7 +46,6 @@ public class Map {
         room6.addItem(item6);
         room7.addItem(item7);
         room9.addItem(item8);
-
 
         // movement for room 1
         room1.setEast(room2);

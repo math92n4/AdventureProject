@@ -32,7 +32,7 @@ public class UserInterface {
 
         System.out.println("Type 'inventory' to see what is in your inventory");
         System.out.println("Type 'take' to pick up things from a room");
-        System.out.println("Type 'drop' to throw away something from your inventory");
+        System.out.println("Type 'drop' to drop an item from your inventory");
         System.out.println("-----------------------------");
 
         boolean error = false;
@@ -47,10 +47,8 @@ public class UserInterface {
                 userChoice = userInputs[1];
             }
 
-
             switch (command) {
                 case "go":
-
                     boolean succes = game.go(userChoice);
                     if (succes) {
                         System.out.println("You've gone " + userChoice);
@@ -122,13 +120,18 @@ public class UserInterface {
 
                 case "inventory", "inven", "inv":
                     System.out.println("Your inventory contains: " + game.getInventory());
-
                     break;
                 case "take":
-                    System.out.println("You've picked up x" + game.takeItem(userChoice));
+                    System.out.println("You've picked up " + game.takeItem(userChoice));
                     break;
                 case "drop":
                     System.out.println("You've dropped: " + game.dropItem(userChoice));
+                    break;
+                case "health", "hp":
+                    System.out.println("You currently have x amount of hp");
+                    break;
+                case "eat":
+                    System.out.println("You've eaten x: +something health points");
                     break;
             }
         } while (true);
