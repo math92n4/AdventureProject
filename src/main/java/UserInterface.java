@@ -35,7 +35,12 @@ public class UserInterface {
         System.out.println("Type 'drop' to drop an item from your inventory");
         System.out.println("-----------------------------");
 
+        System.out.println("Type 'health/hp' to check current health status");
+        System.out.println("Type 'eat' to consume food");
+        System.out.println("-----------------------------");
+
         boolean error = false;
+
 
         do {
             error = false;
@@ -51,8 +56,8 @@ public class UserInterface {
                 case "go":
                     boolean succes = game.go(userChoice);
                     if (succes) {
-                        System.out.println("You've gone " + userChoice);
                         Room currentRoom = game.getCurrentRoom();
+                        System.out.println("You've gone " + userChoice);
                         System.out.println(currentRoom.getName() + " " + currentRoom.getRoomDescription());
 
                     } else {
@@ -111,8 +116,8 @@ public class UserInterface {
                     System.out.println("You are in: " + game.getCurrentRoom().getName());
                     System.out.println("--------------");
                     System.out.println(game.getCurrentRoom().getRoomDescription());
-                    Room currentRoom = game.getCurrentRoom();
                     System.out.println("\nThese are the items in the room: ");
+                    Room currentRoom = game.getCurrentRoom();
                     for (Item item : currentRoom.getItems()) {
                         System.out.println(item.getItemName() + item.getItemDescription());
                     }
@@ -123,16 +128,19 @@ public class UserInterface {
                     break;
                 case "take":
                     System.out.println("You've picked up " + game.takeItem(userChoice));
+                System.out.println();
                     break;
                 case "drop":
                     System.out.println("You've dropped: " + game.dropItem(userChoice));
                     break;
                 case "health", "hp":
-                    System.out.println("You currently have x amount of hp");
+                    System.out.println("You currently have full health" + ", you're good to go");
                     break;
                 case "eat":
-                    System.out.println("You've eaten x: +something health points");
+                        System.out.println("You've eaten: " + game.eatFood(userChoice));
                     break;
+                default:
+                    System.out.println("You can't eat that...");
             }
         } while (true);
     }

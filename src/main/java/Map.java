@@ -37,7 +37,6 @@ public class Map {
         room9.addItem(food5);
         room7.addItem(food6);
 
-
         // item placement
         room2.addItem(item2);
         room3.addItem(item3);

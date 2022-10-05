@@ -39,6 +39,17 @@ public class Player {
         return false;
     }
 
+    public boolean eatFood(String itemName) {
+        for (Item item : inventory) {
+            if (item.getItemName().equals(itemName)) {
+                currentRoom.removeItem(item);
+                inventory.remove(item);
+                return true;
+            }
+        }
+        return false;
+    }
+
     public boolean move(char direction) {
         Room requestedRoom = null;
 
@@ -59,5 +70,4 @@ public class Player {
         }
     }
 
-
-}
+    }

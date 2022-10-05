@@ -13,7 +13,6 @@ public class Adventure {
 
     public boolean go(String direction) {
         return player.move(direction.charAt(0));
-
     }
 
     public Room getCurrentRoom() {
@@ -32,5 +31,8 @@ public class Adventure {
         return player.dropItem(itemName);
     }
 
+    public boolean eatFood(String itemName) {
+        return player.eatFood(itemName);
+    }
 
 }
