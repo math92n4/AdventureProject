@@ -4,6 +4,15 @@ public class Player {
 
     private Room currentRoom;
     private ArrayList<Item> inventory = new ArrayList<>();
+    private int health;
+
+    public Player() {
+        this.health = 100;
+    }
+
+    public int getHealth() {
+        return health;
+    }
 
     public void setCurrentRoom(Room currentRoom) {
         this.currentRoom = currentRoom;
@@ -41,10 +50,13 @@ public class Player {
 
     public boolean eatFood(String itemName) {
         for (Item item : inventory) {
-            if (item.getItemName().equals(itemName)) {
-                currentRoom.removeItem(item);
-                inventory.remove(item);
-                return true;
+            if (item instanceof Food) {
+                if (item.getItemName().equals(itemName)) {
+                    currentRoom.removeItem(item);
+                    inventory.remove(item);
+                    health = health + ((Food) item).getHealthPoints();
+                    return true;
+                }
             }
         }
         return false;

@@ -1,7 +1,14 @@
 public class Food  extends Item{
 
-    public Food(String itemName, String ability) {
+    private int healthPoints;
+
+    public Food(String itemName, String ability, int healthPoints) {
         super(itemName, ability);
+        this.healthPoints = healthPoints;
+    }
+
+    public int getHealthPoints() {
+        return healthPoints;
     }
 
     @Override

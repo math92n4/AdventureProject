@@ -22,12 +22,12 @@ public class Map {
         Item item7 = new Item("armor", " +toughness");
         Item item8 = new Item("key", " for a door?");
 
-        Food food1 = new Food("apple", " +15 hp");
-        Food food2 = new Food("proteinbar", " +20 hp");
-        Food food3 = new Food("rotten meat", " -25 hp");
-        Food food4 = new Food("tequila", " -35 hp");
-        Food food5 = new Food("mountain dew", " +15 hp");
-        Food food6 = new Food("sushi", " +50 hp");
+        Food food1 = new Food("apple", " an apple", +15);
+        Food food2 = new Food("proteinbar", " gains!", +20);
+        Food food3 = new Food("rotten meat", " disgusting...", -25);
+        Food food4 = new Food("tequila", " alcohol", -35);
+        Food food5 = new Food("mountain dew", " soda!", +15);
+        Food food6 = new Food("sushi", " raw fish?", +50);
 
         // food placement
         room1.addItem(food1);
