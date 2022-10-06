@@ -14,7 +14,6 @@ public class Map {
         Room room8 = new Room("Room 8", "its dark and lonely in here ");
         Room room9 = new Room("Room 9", "its dark and lonely in here ");
 
-        Item item2 = new Item("sword", " +attack");
         Item item3 = new Item("goggles", " +utility");
         Item item4 = new Item("shotgun", " +attack");
         Item item5 = new Item("adrenaline,", " +dmg boost");
@@ -22,12 +21,23 @@ public class Map {
         Item item7 = new Item("armor", " +toughness");
         Item item8 = new Item("key", " for a door?");
 
-        Food food1 = new Food("apple", " an apple", +15);
-        Food food2 = new Food("proteinbar", " gains!", +20);
-        Food food3 = new Food("rotten meat", " disgusting...", -25);
-        Food food4 = new Food("tequila", " alcohol", -35);
-        Food food5 = new Food("mountain dew", " soda!", +15);
-        Food food6 = new Food("sushi", " raw fish?", +50);
+        Food food1 = new Food("apple", " an apple ", +15);
+        Food food2 = new Food("proteinbar", " time to muscle up! ", +20);
+        Food food3 = new Food("rotten meat", " disgusting... ", -25);
+        Food food4 = new Food("tequila", " alcohol ", -35);
+        Food food5 = new Food("mountain dew", " soda! ", +15);
+        Food food6 = new Food("sushi", " raw fish? ", +50);
+
+        MeleeWeapon meleeWeapon1 = (MeleeWeapon) new Weapon("sword", " cuts through the wind");
+        MeleeWeapon meleeWeapon2 = (MeleeWeapon) new Weapon("boxing gloves", " SKRRRTTT");
+        RangedWeapon rangedWeapon1 = (RangedWeapon) new Weapon("shotgun", " does tons of damage");
+        RangedWeapon rangedWeapon2 = (RangedWeapon) new Weapon("bow", " and arrow");
+
+        // weapon placement
+        room2.addItem(meleeWeapon1);
+        room6.addItem(meleeWeapon2);
+        room7.addItem(rangedWeapon1);
+        room9.addItem(rangedWeapon2);
 
         // food placement
         room1.addItem(food1);
@@ -38,7 +48,6 @@ public class Map {
         room7.addItem(food6);
 
         // item placement
-        room2.addItem(item2);
         room3.addItem(item3);
         room4.addItem(item4);
         room5.addItem(item5);

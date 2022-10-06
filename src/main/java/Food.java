@@ -11,7 +11,7 @@ public class Food  extends Item{
         return healthPoints;
     }
 
-    @Override
+    @Override // den overrider intet, men gemmer til fremtidig brug:
     public String toString() {
         return getItemName() + ", " + getItemDescription();
     }

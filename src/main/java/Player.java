@@ -4,6 +4,7 @@ public class Player {
 
     private Room currentRoom;
     private ArrayList<Item> inventory = new ArrayList<>();
+    ArrayList<Weapon> weapons = new ArrayList();
     private int health;
 
     public Player() {
@@ -62,6 +63,15 @@ public class Player {
         return false;
     }
 
+   /* public boolean equipWeapon(String itemName) {
+        for (Item item : inventory) {
+            if (item instanceof Weapon) {
+                if (item.getItemName().equals(itemName)) {
+                }
+            }
+        }
+    }*/
+
     public boolean move(char direction) {
         Room requestedRoom = null;
 
@@ -82,4 +92,4 @@ public class Player {
         }
     }
 
-    }
+}

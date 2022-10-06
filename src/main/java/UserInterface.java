@@ -37,9 +37,10 @@ public class UserInterface {
         System.out.println("Type 'health/hp' to check current health status");
         System.out.println("Type 'eat' to consume food");
         System.out.println("-----------------------------");
+    }
 
+    public void gameEngine() {
         boolean error = false;
-
         do {
             error = false;
             String walk = s.nextLine();
