@@ -79,16 +79,23 @@ public class UserInterface {
                     break;
                 case "take":
                     System.out.println("You've picked up " + game.takeItem(userChoice));
-                System.out.println();
+                    System.out.println();
                     break;
                 case "drop":
                     System.out.println("You've dropped: " + game.dropItem(userChoice));
                     break;
                 case "health", "hp":
-                    System.out.println("You currently have: " + game.getHealthPoints());
+                    if (game.getHealthPoints() >= 100)
+                        System.out.println("You currently have: " + game.getHealthPoints() + " you're full health!");
+                    if (game.getHealthPoints() > 50 && game.getHealthPoints() < 100)
+                        System.out.println("You currently have: " + game.getHealthPoints() + " you're good to go!");
+                    if (game.getHealthPoints() > 25 && game.getHealthPoints() < 50) ;
+                    System.out.println("You currently have: " + game.getHealthPoints() + " find something to eat...");
+                    if (game.getHealthPoints() > 1 && game.getHealthPoints() < 25)
+                        System.out.println("You currently have: " + game.getHealthPoints() + " it's not looking good");
                     break;
                 case "eat":
-                        System.out.println("You've eaten: " + game.eatFood(userChoice));
+                    System.out.println("You've eaten: " + game.eatFood(userChoice));
                     break;
                 default:
                     System.out.println("You can't eat that...");
