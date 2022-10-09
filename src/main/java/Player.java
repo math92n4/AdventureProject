@@ -3,12 +3,14 @@ import java.util.ArrayList;
 public class Player {
 
     private Room currentRoom;
-    private ArrayList<Item> inventory = new ArrayList<>();
-    ArrayList<Weapon> weapons = new ArrayList();
+    private ArrayList<Item> inventory = new ArrayList();
+    private ArrayList<Weapon> weapons = new ArrayList();
     private int health;
+    private boolean equipped;
 
     public Player() {
         this.health = 100;
+        this.equipped = true;
     }
 
     public int getHealth() {
@@ -25,6 +27,10 @@ public class Player {
 
     public ArrayList<Item> getInventory() {
         return inventory;
+    }
+
+    public ArrayList<Weapon> getEquippedWeapons() {
+        return weapons;
     }
 
     public boolean takeItem(String itemName) {
@@ -63,14 +69,18 @@ public class Player {
         return false;
     }
 
-   /* public boolean equipWeapon(String itemName) {
+    public boolean equipWeapon(String itemName) {
         for (Item item : inventory) {
             if (item instanceof Weapon) {
-                if (item.getItemName().equals(itemName)) {
-                }
+                if (item.getItemName().equals(item)) {
+                    weapons.add((Weapon) item);
+                    inventory.remove(item);
+                } return true;
             }
         }
-    }*/
+        return false;
+    }
+
 
     public boolean move(char direction) {
         Room requestedRoom = null;

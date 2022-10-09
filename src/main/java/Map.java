@@ -21,17 +21,17 @@ public class Map {
         Item item7 = new Item("armor", " +toughness");
         Item item8 = new Item("key", " for a door?");
 
-        Food food1 = new Food("apple", " an apple ", +15);
-        Food food2 = new Food("proteinbar", " time to muscle up! ", +20);
-        Food food3 = new Food("rotten meat", " disgusting... ", -25);
-        Food food4 = new Food("tequila", " alcohol ", -35);
-        Food food5 = new Food("mountain dew", " soda! ", +15);
-        Food food6 = new Food("sushi", " raw fish? ", +50);
+        Food food1 = new Food("apple,", " an apple ", +15);
+        Food food2 = new Food("proteinbar,", " yum ", +20);
+        Food food3 = new Food("rotten meat,", " nasty ", -25);
+        Food food4 = new Food("tequila,", " booze ", -35);
+        Food food5 = new Food("mountain dew,", " soda! ", +15);
+        Food food6 = new Food("sushi,", " raw fish? ", +50);
 
-        MeleeWeapon meleeWeapon1 = (MeleeWeapon) new Weapon("sword", " cuts through the wind");
-        MeleeWeapon meleeWeapon2 = (MeleeWeapon) new Weapon("boxing gloves", " SKRRRTTT");
-        RangedWeapon rangedWeapon1 = (RangedWeapon) new Weapon("shotgun", " does tons of damage");
-        RangedWeapon rangedWeapon2 = (RangedWeapon) new Weapon("bow", " and arrow");
+        MeleeWeapon meleeWeapon1 = new MeleeWeapon("sword", " cuts through the wind");
+        MeleeWeapon meleeWeapon2 = new MeleeWeapon("boxing gloves", " SKRRRTTT");
+        RangedWeapon rangedWeapon1 = new RangedWeapon("shotgun", " does tons of damage");
+        RangedWeapon rangedWeapon2 = new RangedWeapon("bow", " and arrow");
 
         // weapon placement
         room2.addItem(meleeWeapon1);

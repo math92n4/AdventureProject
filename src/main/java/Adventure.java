@@ -11,12 +11,6 @@ public class Adventure {
         player.setCurrentRoom(map.getStartRoom());
     }
 
-    enum hpStatus {
-        lowHealth,
-        mediumHealth,
-        highHealth
-    }
-
     public boolean go(String direction) {
         return player.move(direction.charAt(0));
     }
@@ -29,6 +23,10 @@ public class Adventure {
         return player.getInventory();
     }
 
+    public ArrayList<Weapon> getEquippedWeapons() {
+        return player.getEquippedWeapons();
+    }
+
     public boolean takeItem(String itemName) {
         return player.takeItem(itemName);
     }
@@ -39,6 +37,10 @@ public class Adventure {
 
     public boolean eatFood(String itemName) {
         return player.eatFood(itemName);
+    }
+
+    public boolean equipWeapon(String itemName) {
+        return player.equipWeapon(itemName);
     }
 
     public int getHealthPoints() {

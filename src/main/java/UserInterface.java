@@ -30,6 +30,8 @@ public class UserInterface {
         System.out.println("-----------------------------");
 
         System.out.println("Type 'inventory' to see what is in your inventory");
+        System.out.println("Type 'equip' to equip weapon or weapons from your inventory");
+        System.out.println("Type 'view' to see equipped weapons");
         System.out.println("Type 'take' to pick up things from a room");
         System.out.println("Type 'drop' to drop an item from your inventory");
         System.out.println("-----------------------------");
@@ -98,8 +100,13 @@ public class UserInterface {
                 case "eat":
                     System.out.println("You've eaten: " + game.eatFood(userChoice));
                     break;
+                case "equip", "equip weapon", "equipweapon":
+                  /*  System.out.println("You have equipped: " + game.equipWeapon(userChoice));
+                    break;
+                case "view":
+                    System.out.println("You currently have:" + game.getEquippedWeapons());
                 default:
-                    System.out.println("You can't eat that...");
+                    System.out.println("You can't do that...");*/
             }
         } while (true);
     }
