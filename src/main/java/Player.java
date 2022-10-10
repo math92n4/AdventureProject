@@ -81,7 +81,6 @@ public class Player {
         return false;
     }
 
-
     public boolean move(char direction) {
         Room requestedRoom = null;
 

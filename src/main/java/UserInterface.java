@@ -101,12 +101,12 @@ public class UserInterface {
                     System.out.println("You've eaten: " + game.eatFood(userChoice));
                     break;
                 case "equip", "equip weapon", "equipweapon":
-                  /*  System.out.println("You have equipped: " + game.equipWeapon(userChoice));
+                  System.out.println("You have equipped: " + game.equipWeapon(userChoice));
                     break;
                 case "view":
                     System.out.println("You currently have:" + game.getEquippedWeapons());
                 default:
-                    System.out.println("You can't do that...");*/
+                    System.out.println("You can't do that...");
             }
         } while (true);
     }
