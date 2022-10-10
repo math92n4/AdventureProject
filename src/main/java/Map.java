@@ -27,10 +27,10 @@ public class Map {
         Food food5 = new Food("mountain dew", " soda! ", +15);
         Food food6 = new Food("sushi", " raw fish? ", +50);
 
-        MeleeWeapon meleeWeapon1 = new MeleeWeapon("sword", " cuts through the wind");
-        MeleeWeapon meleeWeapon2 = new MeleeWeapon("boxing gloves", " SKRRRTTT");
-        RangedWeapon rangedWeapon1 = new RangedWeapon("shotgun", " does tons of damage");
-        RangedWeapon rangedWeapon2 = new RangedWeapon("bow", " and arrow");
+        MeleeWeapon meleeWeapon1 = new MeleeWeapon("sword", " ");
+        MeleeWeapon meleeWeapon2 = new MeleeWeapon("boxing gloves", " ");
+        RangedWeapon rangedWeapon1 = new RangedWeapon("shotgun", " ");
+        RangedWeapon rangedWeapon2 = new RangedWeapon("bow & arrow", " ");
 
         // weapon placement
         room2.addItem(meleeWeapon1);
