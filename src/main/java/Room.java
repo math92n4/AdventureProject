@@ -9,6 +9,7 @@ public class Room {
     private Room east;
     private Room west;
     private ArrayList<Item> items = new ArrayList<>();
+    private ArrayList<Enemy> enemies = new ArrayList<>();
 
     public void addItem(Item item) {
         items.add(item);
@@ -37,6 +38,14 @@ public class Room {
 
     public ArrayList<Item> getItems() {
         return items;
+    }
+
+    public ArrayList<Enemy> getEnemies() {
+        return enemies;
+    }
+
+    public void addEnemy(Enemy enemyName) {
+        enemies.add(enemyName);
     }
 
     public void setNorth(Room north) {

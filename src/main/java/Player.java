@@ -6,16 +6,9 @@ public class Player {
     private ArrayList<Item> inventory = new ArrayList();
     private Weapon equippedWeapon;
     private int health;
-    private boolean equipped;
-    enum response {
-        not_found,
-        eaten,
-        not_food
-    }
 
     public Player() {
         this.health = 100;
-        this.equipped = true;
     }
 
     public int getHealth() {
@@ -80,11 +73,21 @@ public class Player {
                 if (item.getItemName().equals(itemName)) {
                     equippedWeapon = (Weapon) item;
                     inventory.remove(item);
-                } return true;
+                }
+                return true;
             }
         }
         return false;
     }
+
+    /*public ENUM.attackCommands attackEnemy(String enemyName) {
+        if (equippedWeapon == null) {
+            return ENUM.attackCommands.NO_WEAPON;
+        } if (Item item : inventory) {
+
+        }
+
+    } */
 
     public boolean move(char direction) {
         Room requestedRoom = null;
