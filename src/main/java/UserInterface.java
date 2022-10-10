@@ -22,11 +22,11 @@ public class UserInterface {
     public void gameCommands() {
         System.out.println("\nCONTROLS: ");
         System.out.println("-----------------------------");
-        System.out.println("Type 'north' to go north");
-        System.out.println("Type 'south' to go south");
-        System.out.println("Type 'west' to go west");
-        System.out.println("Type 'east' to go east");
-        System.out.println("Type 'look' to look around");
+        System.out.println("Type 'go north' to go north");
+        System.out.println("Type 'go south' to go south");
+        System.out.println("Type 'go west' to go west");
+        System.out.println("Type 'go east' to go east");
+        System.out.println("Type 'go look' to look around");
         System.out.println("-----------------------------");
 
         System.out.println("Type 'inventory' to see what is in your inventory");
@@ -38,6 +38,7 @@ public class UserInterface {
 
         System.out.println("Type 'health/hp' to check current health status");
         System.out.println("Type 'eat' to consume food");
+        System.out.println("Type 'atk/attack' to attack");
         System.out.println("-----------------------------");
         System.out.println("Type: 'start' to enter building");
     }
@@ -92,11 +93,11 @@ public class UserInterface {
                 case "health", "hp":
                     if (game.getHealthPoints() >= 100)
                         System.out.println("You currently have: " + game.getHealthPoints() + " you're full health!");
-                    if (game.getHealthPoints() > 50 && game.getHealthPoints() < 100)
+                    if (game.getHealthPoints() < 100 && game.getHealthPoints() >= 50)
                         System.out.println("You currently have: " + game.getHealthPoints() + " you're good to go!");
-                    if (game.getHealthPoints() > 25 && game.getHealthPoints() < 50) ;
+                    if (game.getHealthPoints() < 49 && game.getHealthPoints() >= 25);
                     System.out.println("You currently have: " + game.getHealthPoints() + " find something to eat...");
-                    if (game.getHealthPoints() > 1 && game.getHealthPoints() < 25)
+                    if (game.getHealthPoints() >= 1 && game.getHealthPoints() <= 24)
                         System.out.println("You currently have: " + game.getHealthPoints() + " it's not looking good");
                     break;
                 case "eat":
