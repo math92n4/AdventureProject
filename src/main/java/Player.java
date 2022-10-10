@@ -4,9 +4,14 @@ public class Player {
 
     private Room currentRoom;
     private ArrayList<Item> inventory = new ArrayList();
-    private ArrayList<Weapon> weapons = new ArrayList();
+    private Weapon equippedWeapon;
     private int health;
     private boolean equipped;
+    enum response {
+        not_found,
+        eaten,
+        not_food
+    }
 
     public Player() {
         this.health = 100;
@@ -29,8 +34,8 @@ public class Player {
         return inventory;
     }
 
-    public ArrayList<Weapon> getEquippedWeapons() {
-        return weapons;
+    public Weapon getEquippedWeapon() {
+        return equippedWeapon;
     }
 
     public boolean takeItem(String itemName) {
@@ -72,15 +77,14 @@ public class Player {
     public boolean equipWeapon(String itemName) {
         for (Item item : inventory) {
             if (item instanceof Weapon) {
-                if (item.getItemName().equals(item)) {
-                    weapons.add((Weapon) item);
+                if (item.getItemName().equals(itemName)) {
+                    equippedWeapon = (Weapon) item;
                     inventory.remove(item);
                 } return true;
             }
         }
         return false;
     }
-
 
     public boolean move(char direction) {
         Room requestedRoom = null;

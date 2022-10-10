@@ -23,8 +23,8 @@ public class Adventure {
         return player.getInventory();
     }
 
-    public ArrayList<Weapon> getEquippedWeapons() {
-        return player.getEquippedWeapons();
+    public Weapon getEquippedWeapon() {
+        return player.getEquippedWeapon();
     }
 
     public boolean takeItem(String itemName) {

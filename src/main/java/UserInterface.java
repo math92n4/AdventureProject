@@ -39,6 +39,7 @@ public class UserInterface {
         System.out.println("Type 'health/hp' to check current health status");
         System.out.println("Type 'eat' to consume food");
         System.out.println("-----------------------------");
+        System.out.println("Type: 'start' to enter building");
     }
 
     public void gameEngine() {
@@ -54,13 +55,15 @@ public class UserInterface {
             }
 
             switch (command) {
+                case "start":
+                    System.out.println("You're currently in: " + game.getCurrentRoom().getName() + " " + game.getCurrentRoom().getRoomDescription());
+                    break;
                 case "go":
                     boolean succes = game.go(userChoice);
                     if (succes) {
                         Room currentRoom = game.getCurrentRoom();
                         System.out.println("You've gone " + userChoice);
                         System.out.println(currentRoom.getName() + " " + currentRoom.getRoomDescription());
-
                     } else {
                         System.out.println("Do you really want jump out the window that bad huh?...");
                     }
@@ -82,7 +85,6 @@ public class UserInterface {
                     break;
                 case "take":
                     System.out.println("You've picked up " + game.takeItem(userChoice));
-                    System.out.println();
                     break;
                 case "drop":
                     System.out.println("You've dropped: " + game.dropItem(userChoice));
@@ -99,14 +101,17 @@ public class UserInterface {
                     break;
                 case "eat":
                     System.out.println("You've eaten: " + game.eatFood(userChoice));
+                    System.out.println("You now have: " + game.getHealthPoints());
                     break;
                 case "equip", "equip weapon", "equipweapon":
-                  /*  System.out.println("You have equipped: " + game.equipWeapon(userChoice));
+                    System.out.println("You have equipped: " + game.equipWeapon(userChoice));
                     break;
-                case "view":
-                    System.out.println("You currently have:" + game.getEquippedWeapons());
+                case "equipped":
+                    System.out.println("You currently have:" + game.getEquippedWeapon() + " equipped" );
+                    break;
                 default:
-                    System.out.println("You can't do that...");*/
+                    System.out.println("You can't do that...");
+                    break;
             }
         } while (true);
     }
