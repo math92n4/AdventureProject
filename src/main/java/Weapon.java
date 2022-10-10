@@ -1,17 +1,15 @@
 import java.util.ArrayList;
 
-public class Weapon extends Item{
+public abstract class Weapon extends Item{
 
     private int damage;
 
-    public Weapon(String itemName, String ability) {
+    public Weapon(String itemName, String ability, int damage) {
         super(itemName, ability);
         this.damage = damage;
     }
 
-    public int getDamage() {
-        return damage;
-    }
+    public abstract boolean canUse();
 
     @Override
     public String toString() {

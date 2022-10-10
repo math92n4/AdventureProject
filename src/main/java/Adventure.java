@@ -43,8 +43,16 @@ public class Adventure {
         return player.equipWeapon(itemName);
     }
 
+    public ENUM.attackCommands attackEnemy(String enemyName) {
+        return player.attackEnemy(enemyName);
+    }
+
+
+
     public int getHealthPoints() {
         return player.getHealth();
     }
+
+
 
 }

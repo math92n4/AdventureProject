@@ -80,14 +80,18 @@ public class Player {
         return false;
     }
 
-    /*public ENUM.attackCommands attackEnemy(String enemyName) {
+    public ENUM.attackCommands attackEnemy(String enemyName) {
         if (equippedWeapon == null) {
-            return ENUM.attackCommands.NO_WEAPON;
-        } if (Item item : inventory) {
-
+            return ENUM.attackCommands.NO_WEAPON_EQUIPPED;
         }
-
-    } */
+        if (!equippedWeapon.canUse()) {
+            return ENUM.attackCommands.NO_AMMO;
+        }
+        if (!enemyName.equals(enemyName)) {
+            return ENUM.attackCommands.NO_ENEMY_NAME;
+        }
+        return ENUM.attackCommands.Succesful;
+    }
 
     public boolean move(char direction) {
         Room requestedRoom = null;

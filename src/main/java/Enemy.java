@@ -4,27 +4,28 @@ public class Enemy extends Player{
 
     private String enemyName;
     private String description;
-    private int health;
-    private int damage;
+    private int enemyHealth;
+    private int enemyDamage;
     private ArrayList<Item> enemyInventory = new ArrayList<>();
+
 
     public Enemy(String itemName, String ability, int health, int damage) {
         this.enemyName = enemyName;
         this.description = description;
-        this.health = health;
-        this.damage = damage;
+        this.enemyHealth = health;
+        this.enemyDamage = damage;
     }
 
     public ArrayList<Item> getEnemyInventory() {
         return enemyInventory;
     }
 
-    public int getHealth() {
-        return health;
+    public int getEnemyHealth() {
+        return enemyHealth;
     }
 
-    public int getDamage() {
-        return damage;
+    public int getEnemyDamage() {
+        return enemyDamage;
     }
 
 }

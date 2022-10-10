@@ -32,12 +32,12 @@ public class Map {
         RangedWeapon rangedWeapon1 = new RangedWeapon("shotgun", " ", 30, 8);
         RangedWeapon rangedWeapon2 = new RangedWeapon("bow & arrow", " ", 20, 6);
 
-        Enemy enemy1 = new Enemy("Robot", " low tier robot", 35, 15);
-        Enemy enemy2 = new Enemy("Outlaw", " ", 60, 25);
+        Enemy enemy1 = new Enemy("robot", " low tier robot", 35, 15);
+        Enemy enemy2 = new Enemy("outlaw", " ", 60, 25);
 
         // enemy placement
-        room1.addEnemy(enemy1);
-        room2.addEnemy(enemy2);
+        room8.addEnemy(enemy1);
+        room3.addEnemy(enemy2);
 
         // weapon placement
         room2.addItem(meleeWeapon1);

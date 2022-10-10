@@ -7,8 +7,12 @@ public class RangedWeapon extends Weapon{
         this.ammo = ammo;
     }
 
-    public int ammoLeft() {
+    public int getAmmoLeft() {
         return ammo;
     }
 
+    @Override
+    public boolean canUse() {
+        return (ammo > 0);
+    }
 }

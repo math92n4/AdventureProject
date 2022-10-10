@@ -5,6 +5,10 @@ public class MeleeWeapon extends Weapon{
         super(itemName, ability, damage);
     }
 
+    @Override
+    public boolean canUse() {
+        return true;
+    }
 
 
 }

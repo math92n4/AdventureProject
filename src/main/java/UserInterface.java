@@ -107,10 +107,10 @@ public class UserInterface {
                     System.out.println("You have equipped: " + game.equipWeapon(userChoice));
                     break;
                 case "equipped":
-                    System.out.println("You currently have:" + game.getEquippedWeapon() + " equipped" );
+                    System.out.println("You currently have:" + game.getEquippedWeapon() + " equipped");
                     break;
                 case "atk", "attak", "attack":
-                  //  System.out.println("You have attacked: " + game.getEnemy);
+                    System.out.println("You have attacked: " + game.attackEnemy(userChoice));
                     break;
                 default:
                     System.out.println("You can't do that...");
