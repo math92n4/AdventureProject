@@ -98,8 +98,8 @@ public class UserInterface {
                         System.out.println("You currently have: " + game.getHealthPoints() + " you're full health!");
                     if (game.getHealthPoints() < 100 && game.getHealthPoints() >= 50)
                         System.out.println("You currently have: " + game.getHealthPoints() + " you're good to go!");
-                    if (game.getHealthPoints() < 49 && game.getHealthPoints() >= 25);
-                    System.out.println("You currently have: " + game.getHealthPoints() + " find something to eat...");
+                    if (game.getHealthPoints() < 49 && game.getHealthPoints() >= 25)
+                        System.out.println("You currently have: " + game.getHealthPoints() + " find something to eat...");
                     if (game.getHealthPoints() >= 1 && game.getHealthPoints() <= 24)
                         System.out.println("You currently have: " + game.getHealthPoints() + " it's not looking good");
                     break;
@@ -111,7 +111,7 @@ public class UserInterface {
                     System.out.println("You have equipped: " + game.equipWeapon(userChoice));
                     break;
                 case "equipped":
-                    System.out.println("You currently have:" + game.getEquippedWeapon() + " equipped");
+                    System.out.println("You currently have: " + game.getEquippedWeapon() + " equipped");
                     break;
                 case "atk", "attak", "attack":
                     System.out.println("You have attacked: " + game.attackEnemy(userChoice));
@@ -123,53 +123,3 @@ public class UserInterface {
         } while (true);
     }
 }
-
-
-/* if (game.goNorth() == true) {
-                        Room currentRoom = game.getCurrentRoom();
-                        System.out.println("You've gone north to " + currentRoom.getName()
-                                + " " + currentRoom.getRoomDescription());
-                        System.out.println("These are the items in this room: ");
-                        System.out.println(" ");
-                        for( Item item : currentRoom.getItems() ) {
-                            System.out.println(item.getItemName() + item.getItemDescription());
-                        }
-                    }
-                    else System.out.println("You really wanna jump out the window that bad huh..."); */
-
-/*  case "south", "s":
-                    if (game.goSouth() == true){
-                        Room currentRoom = game.getCurrentRoom();
-                        System.out.println("You've gone south to " + currentRoom.getName()
-                                + " " + currentRoom.getRoomDescription());
-                        System.out.println("These are the items in this room: ");
-                        for( Item item : currentRoom.getItems() ) {
-                            System.out.println(item.getItemName() + item.getItemDescription());
-                        }
-                    }
-                    else System.out.println("We're pretty high up in the sky, I'm not so sure about that...");
-                    break;
-                case "west", "w":
-                    if (game.goWest() == true) {
-                        Room currentRoom = game.getCurrentRoom();
-                        System.out.println("You've gone west to " + currentRoom.getName()
-                                + " " + currentRoom.getRoomDescription());
-                        System.out.println("These are the items in this room: ");
-                        for( Item item : currentRoom.getItems() ) {
-                            System.out.println(item.getItemName() + item.getItemDescription());
-                        }
-                    }
-                    else System.out.println("Uhmm not gonna happen, nope...");
-                    break;
-                case "east", "e":
-                    if (game.goEast() == true) {
-                        Room currentRoom = game.getCurrentRoom();
-                        System.out.println("You've gone east to " + currentRoom.getName()
-                                + " " + currentRoom.getRoomDescription());
-                        System.out.println("These are the items in this room: ");
-                        for( Item item : currentRoom.getItems() ) {
-                            System.out.println(item.getItemName() + item.getItemDescription());
-                        }
-                    }
-                    else System.out.println("Can we not have suicidal thoughts just for once?...");
-                    break; */

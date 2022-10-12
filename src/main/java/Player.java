@@ -4,8 +4,8 @@ public class Player {
 
     private Room currentRoom;
     private ArrayList<Item> inventory = new ArrayList();
-    private Weapon equippedWeapon;
-    private int health;
+    protected Weapon equippedWeapon;
+    protected int health;
 
     public Player() {
         this.health = 100;
@@ -14,7 +14,6 @@ public class Player {
     public int getHealth() {
         return health;
     }
-
 
     public void setCurrentRoom(Room currentRoom) {
         this.currentRoom = currentRoom;
@@ -30,6 +29,10 @@ public class Player {
 
     public Weapon getEquippedWeapon() {
         return equippedWeapon;
+    }
+
+    public void addItem(Item item) {
+        inventory.add(item);
     }
 
     public boolean takeItem(String itemName) {
@@ -82,16 +85,34 @@ public class Player {
     }
 
     public ENUM.attackCommands attackEnemy(String enemyName) {
-        if (equippedWeapon == null) {
-            return ENUM.attackCommands.NO_WEAPON_EQUIPPED;
-        }
-        if (!equippedWeapon.canUse()) {
-            return ENUM.attackCommands.NO_AMMO;
-        }
-        if (!enemyName.equals(enemyName)) {
+        Enemy enemy = findEnemy(enemyName);
+        if (enemy == null) {
             return ENUM.attackCommands.NO_ENEMY_NAME;
         }
-        return ENUM.attackCommands.Succesful;
+        else if (equippedWeapon == null) {
+            return ENUM.attackCommands.NO_WEAPON_EQUIPPED;
+        }
+        else if (!equippedWeapon.canUse()) {
+            return ENUM.attackCommands.NO_AMMO;
+        }
+        else {
+            enemy.hpAfterHit(this.equippedWeapon.getDamage());
+            this.hpAfterHit(enemy.getEquippedWeapon().getDamage());
+            return ENUM.attackCommands.Succesful;
+        }
+    }
+
+    public void hpAfterHit(int damage) {
+        health -= damage;
+    }
+
+    private Enemy findEnemy(String enemyName) {
+        for (Enemy enemy : currentRoom.getEnemies()) {
+            if (enemy.getEnemyName().equals(enemyName)) {
+                return enemy;
+            }
+        }
+        return null;
     }
 
     public boolean move(char direction) {
@@ -114,4 +135,8 @@ public class Player {
         }
     }
 
+    @Override
+    public String toString() {
+        return health + "";
+    }
 }

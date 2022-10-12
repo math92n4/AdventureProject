@@ -1,13 +1,13 @@
 public class Map {
 
-   private Room startRoom = null;
+    private Room startRoom = null;
 
     public void mapBuild() {
-        Room room1 = new Room("Room 1", "its dark and lonely in here. Something also seems off, let's keep our eyes open and be ready for whatever" +
+        Room room1 = new Room("Room 1", "Why would the brooker give us this mission? Something seems off, let's keep our eyes open and be ready for whatever" +
                 " might happen...");
         Room room2 = new Room("Room 2:", "is that blood over in the corner?.. hmm I knew something was up ");
         Room room3 = new Room("Room 3:", "damn, rotten meat? this stinks... ");
-        Room room4 = new Room("Room 4:", "guns! awesome just what I needed ");
+        Room room4 = new Room("Room 4:", "The view is awesome from up here! ");
         Room room5 = new Room("Room 5:", "I knew it was in here! THE SANDEVISTIAN");
         Room room6 = new Room("Room 6:", "the view of Night City... is it what is is I guess");
         Room room7 = new Room("Room 7:", "this place just gets more creepy");
@@ -20,26 +20,31 @@ public class Map {
         Item item7 = new Item("armor", " +toughness");
         Item item8 = new Item("key", " for a door?");
 
-        Food food1 = new Food("an apple", " ", +15);
+        Food food1 = new Food("apple", " ", +15);
         Food food2 = new Food("proteinbar", " yum ", +20);
         Food food3 = new Food("rotten meat", " nasty ", -25);
         Food food4 = new Food("tequila", " booze ", -35);
         Food food5 = new Food("mountain dew", " soda! ", +15);
-        Food food6 = new Food("sushi", " raw fish? ", +50);
+        Food food6 = new Food("sushi", " california roll! ", +50);
 
         MeleeWeapon meleeWeapon1 = new MeleeWeapon("sword", " ", 15);
         MeleeWeapon meleeWeapon2 = new MeleeWeapon("boxing gloves", " ", 10);
         RangedWeapon rangedWeapon1 = new RangedWeapon("shotgun", " ", 30, 8);
         RangedWeapon rangedWeapon2 = new RangedWeapon("bow & arrow", " ", 20, 6);
 
-        Enemy enemy1 = new Enemy("robot", " low tier robot", 35, 15);
-        Enemy enemy2 = new Enemy("outlaw", " ", 60, 25);
+        // enemy Weapons
+        MeleeWeapon enemyWeapon1 = new MeleeWeapon("lightcutter", " ", 35);
+        MeleeWeapon enemyWeapon2 = new MeleeWeapon("BloodThirster", " ", 60);
 
-        enemy1.addWeapon(meleeWeapon1);
+        // enemies and their HP
+        Enemy enemy1 = new Enemy("robot", ", low tier robot", 45,enemyWeapon1);
+        Enemy enemy2 = new Enemy("outlaw", ", a cyberpunk", 65, enemyWeapon2);
+
+        // add to enemy inventory
 
         // enemy placement
-        room1.addEnemy(enemy1);
-        room3.addEnemy(enemy2);
+        room3.addEnemy(enemy1);
+        room8.addEnemy(enemy2);
 
         // weapon placement
         room2.addItem(meleeWeapon1);
