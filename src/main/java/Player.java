@@ -15,6 +15,7 @@ public class Player {
         return health;
     }
 
+
     public void setCurrentRoom(Room currentRoom) {
         this.currentRoom = currentRoom;
     }

@@ -79,6 +79,9 @@ public class UserInterface {
                     for (Item item : currentRoom.getItems()) {
                         System.out.println(item.getItemName() + item.getItemDescription());
                     }
+                    System.out.println("--------------");
+                    System.out.println(game.getCurrentRoom().getEnemies());
+
                     break;
 
                 case "inventory", "inven", "inv":

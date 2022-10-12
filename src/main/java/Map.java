@@ -20,7 +20,7 @@ public class Map {
         Item item7 = new Item("armor", " +toughness");
         Item item8 = new Item("key", " for a door?");
 
-        Food food1 = new Food("apple", " an apple ", +15);
+        Food food1 = new Food("an apple", " ", +15);
         Food food2 = new Food("proteinbar", " yum ", +20);
         Food food3 = new Food("rotten meat", " nasty ", -25);
         Food food4 = new Food("tequila", " booze ", -35);
@@ -35,8 +35,10 @@ public class Map {
         Enemy enemy1 = new Enemy("robot", " low tier robot", 35, 15);
         Enemy enemy2 = new Enemy("outlaw", " ", 60, 25);
 
+        enemy1.addWeapon(meleeWeapon1);
+
         // enemy placement
-        room8.addEnemy(enemy1);
+        room1.addEnemy(enemy1);
         room3.addEnemy(enemy2);
 
         // weapon placement
@@ -44,6 +46,7 @@ public class Map {
         room6.addItem(meleeWeapon2);
         room7.addItem(rangedWeapon1);
         room9.addItem(rangedWeapon2);
+
 
         // food placement
         room1.addItem(food1);

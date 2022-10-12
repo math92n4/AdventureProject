@@ -47,6 +47,7 @@ public class Adventure {
         return player.attackEnemy(enemyName);
     }
 
+
     public int getHealthPoints() {
         return player.getHealth();
     }

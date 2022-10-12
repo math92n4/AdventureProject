@@ -9,7 +9,7 @@ public class Enemy extends Player{
     private ArrayList<Item> enemyInventory = new ArrayList<>();
 
 
-    public Enemy(String itemName, String ability, int health, int damage) {
+    public Enemy(String enemyName, String description, int health, int damage) {
         this.enemyName = enemyName;
         this.description = description;
         this.enemyHealth = health;
@@ -20,12 +20,22 @@ public class Enemy extends Player{
         return enemyInventory;
     }
 
+
     public int getEnemyHealth() {
         return enemyHealth;
     }
 
     public int getEnemyDamage() {
         return enemyDamage;
+    }
+
+    public void addWeapon(Weapon weapon) {
+        enemyInventory.add(weapon);
+    }
+
+    @Override
+    public String toString() {
+        return enemyName + ", " + enemyInventory;
     }
 
 }

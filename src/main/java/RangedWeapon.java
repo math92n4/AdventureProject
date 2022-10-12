@@ -11,8 +11,8 @@ public class RangedWeapon extends Weapon{
         return ammo;
     }
 
-    @Override
     public boolean canUse() {
+        ammo -= 1;
         return (ammo > 0);
     }
 }

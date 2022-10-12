@@ -11,6 +11,10 @@ public abstract class Weapon extends Item{
 
     public abstract boolean canUse();
 
+    public int getDamage() {
+        return damage;
+    }
+
     @Override
     public String toString() {
         return getItemName() + ", " + getItemDescription();
