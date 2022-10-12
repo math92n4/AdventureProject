@@ -24,17 +24,17 @@ public class Map {
         Food food2 = new Food("proteinbar", " yum ", +20);
         Food food3 = new Food("rotten meat", " nasty ", -25);
         Food food4 = new Food("tequila", " booze ", -35);
-        Food food5 = new Food("mountain dew", " soda! ", +15);
+        Food food5 = new Food("soda", " mountain dew! ", +15);
         Food food6 = new Food("sushi", " california roll! ", +50);
 
         MeleeWeapon meleeWeapon1 = new MeleeWeapon("sword", " ", 15);
-        MeleeWeapon meleeWeapon2 = new MeleeWeapon("boxing gloves", " ", 10);
+        MeleeWeapon meleeWeapon2 = new MeleeWeapon("knife", " ", 10);
         RangedWeapon rangedWeapon1 = new RangedWeapon("shotgun", " ", 30, 8);
-        RangedWeapon rangedWeapon2 = new RangedWeapon("bow & arrow", " ", 20, 6);
+        RangedWeapon rangedWeapon2 = new RangedWeapon("bow", " ", 20, 6);
 
         // enemy Weapons
-        MeleeWeapon enemyWeapon1 = new MeleeWeapon("lightcutter", " ", 35);
-        MeleeWeapon enemyWeapon2 = new MeleeWeapon("BloodThirster", " ", 60);
+        MeleeWeapon enemyWeapon1 = new MeleeWeapon("lightcutter", " ", 20);
+        MeleeWeapon enemyWeapon2 = new MeleeWeapon("BloodThirster", " ", 45);
 
         // enemies and their HP
         Enemy enemy1 = new Enemy("robot", ", low tier robot", 45,enemyWeapon1);

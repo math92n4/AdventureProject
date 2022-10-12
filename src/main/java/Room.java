@@ -18,6 +18,10 @@ public class Room {
         items.remove(item);
     }
 
+    public void removeEnemy(Enemy enemy) {
+        enemies.remove(enemy);
+    }
+
     public Room(String name, String roomDescription) {
         this.name = name;
         this.roomDescription = roomDescription;
@@ -43,8 +47,18 @@ public class Room {
         return enemies;
     }
 
-    public void addEnemy(Enemy enemyName) {
-        enemies.add(enemyName);
+    public Enemy findEnemy(String enemyName) {
+        for (Enemy enemy : enemies) {
+            if (enemy.getEnemyName().equals(enemyName)) {
+                return enemy;
+            }
+        }
+        return null;
+    }
+
+    public void addEnemy(Enemy enemy) {
+        enemies.add(enemy);
+        enemy.setCurrentRoom(this);
     }
 
     public void setNorth(Room north) {

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Player {
 
-    private Room currentRoom;
+    protected Room currentRoom;
     private ArrayList<Item> inventory = new ArrayList();
     protected Weapon equippedWeapon;
     protected int health;
@@ -29,10 +29,6 @@ public class Player {
 
     public Weapon getEquippedWeapon() {
         return equippedWeapon;
-    }
-
-    public void addItem(Item item) {
-        inventory.add(item);
     }
 
     public boolean takeItem(String itemName) {
@@ -84,35 +80,21 @@ public class Player {
         return false;
     }
 
-    public ENUM.attackCommands attackEnemy(String enemyName) {
-        Enemy enemy = findEnemy(enemyName);
-        if (enemy == null) {
-            return ENUM.attackCommands.NO_ENEMY_NAME;
-        }
-        else if (equippedWeapon == null) {
+    public ENUM.attackCommands attackEnemy(Enemy enemy) {
+        if (equippedWeapon == null) {
             return ENUM.attackCommands.NO_WEAPON_EQUIPPED;
-        }
-        else if (!equippedWeapon.canUse()) {
+        } else if (!equippedWeapon.canUse()) {
             return ENUM.attackCommands.NO_AMMO;
-        }
-        else {
+        } else {
             enemy.hpAfterHit(this.equippedWeapon.getDamage());
             this.hpAfterHit(enemy.getEquippedWeapon().getDamage());
+            enemy.enemyHealth();
             return ENUM.attackCommands.Succesful;
         }
     }
 
     public void hpAfterHit(int damage) {
         health -= damage;
-    }
-
-    private Enemy findEnemy(String enemyName) {
-        for (Enemy enemy : currentRoom.getEnemies()) {
-            if (enemy.getEnemyName().equals(enemyName)) {
-                return enemy;
-            }
-        }
-        return null;
     }
 
     public boolean move(char direction) {
@@ -134,7 +116,6 @@ public class Player {
             return true;
         }
     }
-
     @Override
     public String toString() {
         return health + "";

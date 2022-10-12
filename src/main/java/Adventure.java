@@ -4,6 +4,7 @@ import java.util.ArrayList;
 public class Adventure {
 
     Player player = new Player();
+    Enemy enemy = null;
 
     public Adventure() {
         Map map = new Map();
@@ -44,13 +45,20 @@ public class Adventure {
     }
 
     public ENUM.attackCommands attackEnemy(String enemyName) {
-        return player.attackEnemy(enemyName);
+        enemy = player.getCurrentRoom().findEnemy(enemyName);
+        if (enemy == null) {
+                return ENUM.attackCommands.NO_ENEMY_NAME;
+        } else {
+            return player.attackEnemy(enemy);
+        }
     }
-
 
     public int getHealthPoints() {
         return player.getHealth();
     }
 
+    public int getEnemyHealthPoints() {
+        return enemy.getHealthPoints();
+    }
 
 }

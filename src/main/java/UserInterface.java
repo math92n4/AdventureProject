@@ -115,6 +115,12 @@ public class UserInterface {
                     break;
                 case "atk", "attak", "attack":
                     System.out.println("You have attacked: " + game.attackEnemy(userChoice));
+                    System.out.println("You now have: " + game.getHealthPoints() + "HP");
+                    try {
+                        System.out.println("Enemy now has: " + game.getEnemyHealthPoints() + "HP");
+                    } catch (NullPointerException npe) {
+                        System.out.println("No more fighting...");
+                    }
                     break;
                 default:
                     System.out.println("You can't do that...");

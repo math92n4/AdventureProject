@@ -5,7 +5,7 @@ public class ENUM {
         NO_ENEMY,
         NO_ENEMY_NAME,
         NO_AMMO,
-        Succesful;
+        Succesful,
 
     }
 }
