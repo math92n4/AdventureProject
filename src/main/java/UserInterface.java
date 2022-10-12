@@ -80,7 +80,7 @@ public class UserInterface {
                         System.out.println(item.getItemName() + item.getItemDescription());
                     }
                     System.out.println("--------------");
-                    System.out.println(game.getCurrentRoom().getEnemies());
+                    System.out.println("This enemy is in the room: "+ game.getCurrentRoom().getEnemies());
 
                     break;
 
@@ -114,7 +114,7 @@ public class UserInterface {
                     System.out.println("You currently have: " + game.getEquippedWeapon() + " equipped");
                     break;
                 case "atk", "attak", "attack":
-                    System.out.println("You have attacked: " + game.attackEnemy(userChoice));
+                    System.out.println(game.attackEnemy(userChoice));
                     System.out.println("You now have: " + game.getHealthPoints() + "HP");
                     try {
                         System.out.println("Enemy now has: " + game.getEnemyHealthPoints() + "HP");

@@ -80,16 +80,16 @@ public class Player {
         return false;
     }
 
-    public ENUM.attackCommands attackEnemy(Enemy enemy) {
+    public AttackCommand attackEnemy(Enemy enemy) {
         if (equippedWeapon == null) {
-            return ENUM.attackCommands.NO_WEAPON_EQUIPPED;
+            return AttackCommand.NO_WEAPON_EQUIPPED;
         } else if (!equippedWeapon.canUse()) {
-            return ENUM.attackCommands.NO_AMMO;
+            return AttackCommand.NO_AMMO;
         } else {
             enemy.hpAfterHit(this.equippedWeapon.getDamage());
             this.hpAfterHit(enemy.getEquippedWeapon().getDamage());
             enemy.enemyHealth();
-            return ENUM.attackCommands.Succesful;
+            return AttackCommand.Succesful;
         }
     }
 

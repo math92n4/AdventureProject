@@ -40,8 +40,6 @@ public class Map {
         Enemy enemy1 = new Enemy("robot", ", low tier robot", 45,enemyWeapon1);
         Enemy enemy2 = new Enemy("outlaw", ", a cyberpunk", 65, enemyWeapon2);
 
-        // add to enemy inventory
-
         // enemy placement
         room3.addEnemy(enemy1);
         room8.addEnemy(enemy2);

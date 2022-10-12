@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Adventure {
@@ -44,10 +43,10 @@ public class Adventure {
         return player.equipWeapon(itemName);
     }
 
-    public ENUM.attackCommands attackEnemy(String enemyName) {
+    public AttackCommand attackEnemy(String enemyName) {
         enemy = player.getCurrentRoom().findEnemy(enemyName);
         if (enemy == null) {
-                return ENUM.attackCommands.NO_ENEMY_NAME;
+                return AttackCommand.NO_ENEMY_NAME;
         } else {
             return player.attackEnemy(enemy);
         }
