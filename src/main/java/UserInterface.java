@@ -39,6 +39,7 @@ public class UserInterface {
         System.out.println("Type 'health/hp' to check current health status");
         System.out.println("Type 'eat' to consume food");
         System.out.println("Type 'atk/attack' to attack");
+        System.out.println("Type 'commands' to see your commands");
         System.out.println("-----------------------------");
         System.out.println("Type: 'start' to enter building");
     }
@@ -68,6 +69,9 @@ public class UserInterface {
                     } else {
                         System.out.println("Do you really want jump out the window that bad huh?...");
                     }
+                    break;
+                case "command", "commands":
+                    gameCommands();
                     break;
                 case "look":
                     System.out.println("Looking around ");
