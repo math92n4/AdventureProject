@@ -9,7 +9,7 @@ public class Map {
         Room room3 = new Room("Room 3:", "damn, rotten meat? this stinks... ");
         Room room4 = new Room("Room 4:", "The view is awesome from up here! ");
         Room room5 = new Room("Room 5:", "I knew it was in here! THE SANDEVISTIAN");
-        Room room6 = new Room("Room 6:", "the view of Night City... is it what is is I guess");
+        Room room6 = new Room("Room 6:", "the view of Night City... it is what is it I guess");
         Room room7 = new Room("Room 7:", "this place just gets more creepy");
         Room room8 = new Room("Room 8:", "I see something right up ahead, lets look out for traps ");
         Room room9 = new Room("Room 9:", "its just dark and lonely in here. ");
@@ -19,6 +19,7 @@ public class Map {
         Item item6 = new Item("boots", " +movement");
         Item item7 = new Item("armor", " +toughness");
         Item item8 = new Item("key", " for a door?");
+        Item item9 = new Item("Sandevistian", " ");
 
         Food food1 = new Food("apple", " ", +15);
         Food food2 = new Food("proteinbar", " yum ", +20);
@@ -34,7 +35,7 @@ public class Map {
 
         // enemy Weapons
         MeleeWeapon enemyWeapon1 = new MeleeWeapon("lightcutter", " ", 20);
-        MeleeWeapon enemyWeapon2 = new MeleeWeapon("BloodThirster", " ", 45);
+        MeleeWeapon enemyWeapon2 = new MeleeWeapon("bloodThirster", " ", 45);
 
         // enemies and their HP
         Enemy enemy1 = new Enemy("robot", ", low tier robot", 45,enemyWeapon1);
@@ -60,6 +61,7 @@ public class Map {
         room7.addItem(food6);
 
         // item placement
+        room5.addItem(item9);
         room3.addItem(item3);
         room5.addItem(item5);
         room6.addItem(item6);

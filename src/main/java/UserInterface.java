@@ -18,7 +18,6 @@ public class UserInterface {
                 "You're surrounded by countless corporate buildings, high skyscrapers with glass walls shinier than most could imagine, junkies and Cyberpunks.\n" +
                 "And if you've made it this far already, you're in for a lot of trouble. Welcome to Night City, the place of your wildest desires.");
     }
-
     public void gameCommands() {
         System.out.println("\nCONTROLS: ");
         System.out.println("-----------------------------");
@@ -26,7 +25,7 @@ public class UserInterface {
         System.out.println("Type 'go south' to go south");
         System.out.println("Type 'go west' to go west");
         System.out.println("Type 'go east' to go east");
-        System.out.println("Type 'go look' to look around");
+        System.out.println("Type 'look' to look around");
         System.out.println("-----------------------------");
 
         System.out.println("Type 'inventory' to see what is in your inventory");
@@ -43,7 +42,6 @@ public class UserInterface {
         System.out.println("-----------------------------");
         System.out.println("Type: 'start' to enter building");
     }
-
     public void gameEngine() {
         boolean error = false;
         do {
